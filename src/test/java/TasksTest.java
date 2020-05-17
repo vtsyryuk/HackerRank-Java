@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TasksTest {
 
     @Test
-    void test1() {
+    void testRepeatedString() {
         assertEquals(0, Tasks.repeatedString(null, 10));
         assertEquals(0, Tasks.repeatedString("", 10));
         assertEquals(5, Tasks.repeatedString("a", 5));
@@ -21,7 +21,7 @@ public class TasksTest {
     }
 
     @Test
-    void test2() {
+    void testSuperDigit() {
         assertEquals(0, Tasks.superDigit(null, 3));
         assertEquals(0, Tasks.superDigit("", 3));
         assertEquals(3, Tasks.superDigit("148", 3));
