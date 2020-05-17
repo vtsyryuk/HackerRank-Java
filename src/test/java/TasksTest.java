@@ -33,6 +33,12 @@ public class TasksTest {
 
     @Test
     void testPalindrome() {
+        assertEquals(0, Tasks.palindrome(null));
+        assertEquals(0, Tasks.palindrome(""));
+        assertEquals(1, Tasks.palindrome("a"));
+        assertEquals(1, Tasks.palindrome("A"));
+        assertEquals(1, Tasks.palindrome("z"));
+        assertEquals(1, Tasks.palindrome("Z"));
         assertEquals(7, Tasks.palindrome("mokkori"));
         assertEquals(5, Tasks.palindrome("aabaa"));
     }
