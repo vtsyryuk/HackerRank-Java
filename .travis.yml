@@ -1,7 +1,10 @@
 language: java
-sudo: false # faster builds
 jdk:
+  - openjdk8
   - oraclejdk8
+  - openjdk11     # LTS
+  - oraclejdk11
+sudo: true
 before_script:
   - chmod +x gradlew
 script:
