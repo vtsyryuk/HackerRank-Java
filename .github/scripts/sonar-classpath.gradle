@@ -1,0 +1,8 @@
+allprojects {
+    afterEvaluate {
+        tasks.create('sonarCopyLibraries', Copy) {
+            from configurations.findByName('testRuntimeClasspath') ?: configurations.testRuntime
+            into "${buildDir}/sonar-libs"
+        }
+    }
+}

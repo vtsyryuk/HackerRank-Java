@@ -19,3 +19,5 @@ Scanner inputs: `build/classes/`, `build/reports/`, `build/test-results/`. The w
 The legacy Java build runs under JDK 8; scanning runs separately under JDK 25 using the compiled bytecode and JaCoCo XML. The existing Gradle wrapper and application compatibility are preserved.
 
 After activation, make `SonarCloud analysis and quality gate` a required check in GitHub branch protection if desired. Do not require that job for untrusted PRs whose analysis is intentionally skipped.
+
+All workflow actions are pinned to immutable commits. Permissions are declared per job, and the build/test job receives no SonarCloud token.
